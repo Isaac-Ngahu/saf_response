@@ -1,10 +1,10 @@
 import mysql.connector
 mydb = mysql.connector.connect(
   host="isaacngahu.mysql.pythonanywhere-services.com",
-  username="isaacngahu",
+  user="isaacngahu",
   database="isaacngahu$response",
-  port=3306,
-  password="12976@pythonanywhere"
+  password="12976@pythonanywhere",
+  port=3306
 )
 
 def insert_response(sender,response):
@@ -14,6 +14,7 @@ def insert_response(sender,response):
     values = (sender,response)
     cursor.execute(sql,values)
     mydb.commit()
+    return True
   finally:
     cursor.close()
 
@@ -26,3 +27,6 @@ def get_responses():
     return rows
   finally:
     cursor.close()
+
+
+print(insert_response("safaricom","testing 2 3 4"))

@@ -4,7 +4,7 @@ from db import insert_response, get_responses
 
 app = Flask(__name__)
 
-app.route('/',methods=['GET',])
+app.route('/',methods=['GET'])
 def get_response():
     responses = get_responses()
     return jsonify(responses)
