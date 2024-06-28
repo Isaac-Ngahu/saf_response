@@ -29,4 +29,4 @@ def get_responses():
     cursor.close()
 
 
-print(insert_response("safaricom","testing 2 3 4"))
+print(insert_response("safaricom","testing..."))
