@@ -1,6 +1,6 @@
 import psycopg2
 mydb = psycopg2.connect(
-  host="dpg-cq16eteehbks73er0gs0-a",
+  host="postgresql://response_user:zC02dAZUYFVEKgy8vMmh9ChaLK5fT6Vo@dpg-cq16eteehbks73er0gs0-a/response",
   user="response_user",
   database="response",
   password="zC02dAZUYFVEKgy8vMmh9ChaLK5fT6Vo",
