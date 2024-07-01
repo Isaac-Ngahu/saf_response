@@ -1,9 +1,10 @@
 from flask import Flask, request, json,jsonify
 
 from db import insert_response, get_responses
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 @app.route('/',methods=['GET'])
 def get_response():
     responses = get_responses()
