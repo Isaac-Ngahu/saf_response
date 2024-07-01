@@ -1,9 +1,9 @@
-import mysql.connector
-mydb = mysql.connector.connect(
-  host="isaacngahu.mysql.pythonanywhere-services.com",
-  user="isaacngahu",
-  database="isaacngahu$response",
-  password="12976@pythonanywhere",
+import psycopg2
+mydb = psycopg2.connect(
+  host="dpg-cq16eteehbks73er0gs0-a",
+  user="response_user",
+  database="response",
+  password="zC02dAZUYFVEKgy8vMmh9ChaLK5fT6Vo",
   port=3306
 )
 
