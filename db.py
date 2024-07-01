@@ -6,7 +6,7 @@ mydb = psycopg2.connect(
 def insert_response(sender,response):
   cursor = mydb.cursor()
   try:
-    sql = "INSERT INTO saf_response (sender,reponse) VALUES (%s,%s)"
+    sql = "INSERT INTO saf_response (sender,message) VALUES (%s,%s)"
     values = (sender,response)
     cursor.execute(sql,values)
     mydb.commit()
