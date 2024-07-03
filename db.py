@@ -25,5 +25,3 @@ def get_responses():
     return rows
   finally:
     cursor.close()
-
-
