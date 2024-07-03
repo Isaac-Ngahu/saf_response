@@ -17,7 +17,7 @@ def insert_response(sender,response):
 def get_responses():
   cursor = mydb.cursor()
   try:
-    sql = "SELECT * FROM saf_response ORDER BY TimeReceived DESC LIMIT 3"
+    sql = "SELECT * FROM saf_response ORDER BY TimeReceived DESC"
     cursor.execute(sql)
     rows = cursor.fetchall()
     return rows
