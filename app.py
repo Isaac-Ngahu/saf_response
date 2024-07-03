@@ -7,8 +7,11 @@ app = Flask(__name__)
 CORS(app)
 @app.route('/',methods=['GET'])
 def get_response():
-    responses = get_responses()
-    return jsonify(responses)
+    try:
+        responses = get_responses()
+        return jsonify(responses)
+    except Exception as e:
+        print(e)
 @app.route('/response',methods=['POST'])
 def send_reponse():
     data = request.get_json()
