@@ -11,6 +11,8 @@ def insert_response(sender,response):
     cursor.execute(sql,values)
     mydb.commit()
     return True
+  except (Exception, psycopg2.DatabaseError) as error:
+    print(error)
   finally:
     cursor.close()
 
@@ -25,4 +27,3 @@ def get_responses():
     cursor.close()
 
 
-print(insert_response("safaricom","testing..."))
