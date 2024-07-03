@@ -23,6 +23,3 @@ def get_responses():
     return rows
   finally:
     cursor.close()
-
-
-print(insert_response("safaricom","testing..."))
