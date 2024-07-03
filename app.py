@@ -9,7 +9,10 @@ CORS(app)
 def get_response():
     try:
         responses = get_responses()
-        return jsonify(responses)
+        if len(responses)>0:
+            return jsonify(responses)
+        else:
+            return jsonify("no response")
     except Exception as e:
         print(e)
 @app.route('/response',methods=['POST'])
