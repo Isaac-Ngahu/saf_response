@@ -13,6 +13,7 @@ def insert_response(sender,response):
     return True
   except (Exception, psycopg2.DatabaseError) as error:
     print(error)
+    return error
   finally:
     cursor.close()
 
@@ -23,5 +24,8 @@ def get_responses():
     cursor.execute(sql)
     rows = cursor.fetchall()
     return rows
+  except (Exception, psycopg2.DatabaseError) as error:
+    print(error)
+    return error
   finally:
     cursor.close()
